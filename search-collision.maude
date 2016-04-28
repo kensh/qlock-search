@@ -1,0 +1,10 @@
+load pid.maude .
+load label.maude .
+load queue.maude .
+load qlock.maude .
+load qlock-init.maude .
+search [1] in QLOCK-INIT : init =>* (S:Sys) (pc[p1]: cs) (pc[p2]: cs) .
+
+***(
+search in QLOCK-INIT : init =>* S:Sys (pc[p1]: cs) pc[p2]: cs .
+)

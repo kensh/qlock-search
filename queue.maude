@@ -1,0 +1,14 @@
+fmod QUEUE is pr PID . sort Queue .
+ op empty : -> Queue .
+ op _ _ : Pid Queue -> Queue .
+ op enq : Queue Pid -> Queue .
+ op deq : Queue -> Queue .
+ op top : Queue -> Pid .
+ 
+ var Q : Queue . vars X Y : Pid .
+ eq enq(empty,X) = X empty .
+ eq enq((Y Q),X) = Y enq(Q,X) .
+ eq deq(empty) = empty .
+ eq deq((X Q)) = Q .
+ eq top((X Q)) = X .
+endfm

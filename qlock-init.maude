@@ -1,0 +1,4 @@
+mod QLOCK-INIT is pr QLOCK .
+ op init : -> Sys .
+ eq init = (pc[p1]: rs) (pc[p2]: rs) ( queue: empty) (tmp[p1]: empty) (tmp[p2] : empty) .
+endm
